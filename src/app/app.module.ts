@@ -7,17 +7,13 @@ import { HomePage } from '../pages/home/home';
 import { SummaryModalPage } from '../pages/summary-modal/summary-modal'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { SectorProvider } from '../providers/sector/sector';
 
-import {CustomerCardComponent} from '../components/customer-card/customer-card'
-// import { HotTableModule } from 'angular-handsontable';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    SummaryModalPage,
-    CustomerCardComponent
+    SummaryModalPage
   ],
   imports: [
     BrowserModule,
@@ -33,8 +29,6 @@ import {CustomerCardComponent} from '../components/customer-card/customer-card'
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SectorProvider
-  ]
+    {provide: ErrorHandler, useClass: IonicErrorHandler}  ]
 })
 export class AppModule {}

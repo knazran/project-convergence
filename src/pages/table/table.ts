@@ -45,10 +45,10 @@ export class TablePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TablePage');
-    // this.drawNetworkGraph();
     this.loadMap();
     this.drawChart();
 
+    // Load twitter widget
     !function(d,s,id){
                 var js: any,
                     fjs=d.getElementsByTagName(s)[0],
@@ -70,16 +70,6 @@ export class TablePage {
   }
 
   loadMap(){
-   
-      let latLng = new google.maps.LatLng(-34.9290, 138.6010);
-   
-      let mapOptions = {
-        center: latLng,
-        zoom: 15,
-        mapTypeId: 'satellite'
-      }
-   
-      
       let heatmapData = [
         new google.maps.LatLng(2.762698, 101.721754),
         new google.maps.LatLng(2.762698, 101.721754),
@@ -152,7 +142,7 @@ export class TablePage {
 
       this.map = new google.maps.Map(document.getElementById('map'), {
         center: kl,
-        zoom: 9,
+        zoom: 6,
         mapTypeId: 'satellite'
       });
 
@@ -161,56 +151,6 @@ export class TablePage {
       });
       this.heatmap.setMap(this.map);
     }
-
-  // drawNetworkGraph(){
-  //   console.log(this.cy_canvas)
-  //   this.network_chart= new Cytoscape({
-  //     // container: this.cy_canvas
-  //     container: this.cy_canvas.nativeElement, // container to render in
-
-  //     elements: [
-  //         { data: { id: 'a' } },
-  //         { data: { id: 'b' } },
-  //         ],
-
-  //     // style: [ // the stylesheet for the graph
-  //     //   {
-  //     //     selector: 'node',
-  //     //     style: {
-  //     //       'background-color': '#666',
-  //     //       'label': 'data(id)'
-  //     //     }
-  //     //   },
-
-  //     //   {
-  //     //     selector: 'edge',
-  //     //     style: {
-  //     //       'width': 3,
-  //     //       'line-color': '#ccc',
-  //     //       'target-arrow-color': '#ccc',
-  //     //       'target-arrow-shape': 'triangle'
-  //     //     }
-  //     //   }
-  //     // ],
-
-  //     // layout: {
-  //     //   name: 'grid',
-  //     //   rows: 10
-  //     // }
-
-  //   // });
-  //   })
-  //   this.network_chart.add({
-  //       group: "nodes",
-  //       data: { weight: 75 },
-  //       position: { x: 200, y: 200 }
-  //   });
-
-  //   console.log(this.network_chart.container())
-  //   this.network_chart.resize();
-  // }
-
-
   // Giant scary code to draw our savings bar chart
   drawChart(){
     this.vizChart = new Chart(this.vizCanvas.nativeElement, {
@@ -258,25 +198,5 @@ export class TablePage {
           // maintainAspectRatio: true
         }
       })
-  }
-
-  // segmentChanged(event:any){
-  //   console.log("Change")
-  //   if (this.segment == 'visual'){
-  //     this.hideViz = false;
-  //     this.drawChart();
-  //   }else{
-  //     this.hideViz = true;
-  //   }
-  // }
-
-  generateTable(){
-    // this.xltable = new Handsontable(this.excelTable.nativeElement, {
-    //     data: Handsontable.helper.createSpreadsheetData(100, 10),
-    //     minSpareCols: 1,
-    //     minSpareRows: 1,
-    //     rowHeaders: true,
-    //     colHeaders: true,
-    // })
   }
 }

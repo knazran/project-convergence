@@ -4,7 +4,7 @@ import { SummaryModalPage } from './summary-modal';
 
 @NgModule({
   declarations: [
-    SummaryModalPage,
+    // SummaryModalPage,
   ],
   imports: [
     IonicPageModule.forChild(SummaryModalPage),
