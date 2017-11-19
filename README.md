@@ -1,26 +1,10 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Project Convergence
+An integrated dashboard that uses Machine Learning and Image Recognition technologies to flag suspicious person based on a set of indicators matched against past reported transactions to provide holistic view on the profile of the identified person(s).
 
-## How to use this template
+# Pre-Setup
+Ensure ionic and cordova is installed in your machine https://ionicframework.com/getting-started/
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
-```
-
-Then, to run it, cd into `mySideMenu` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
+# Setup Instructions
+1. Run `$ npm install` to install necessary dependencies
+2. Run `$ ionic serve` to run the app on local browser
 
