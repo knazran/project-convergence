@@ -4,31 +4,37 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
+import { SummaryModalPage } from '../pages/summary-modal/summary-modal'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SectorProvider } from '../providers/sector/sector';
+
+import {CustomerCardComponent} from '../components/customer-card/customer-card'
+// import { HotTableModule } from 'angular-handsontable';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    SummaryModalPage,
+    CustomerCardComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    // HotTableModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    SummaryModalPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SectorProvider
   ]
 })
 export class AppModule {}

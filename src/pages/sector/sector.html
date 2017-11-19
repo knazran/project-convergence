@@ -1,0 +1,37 @@
+<!--
+  Generated template for the SectorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title> Terrorism Financing</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<!-- <canvas #vizCanvas class="canvas" ></canvas> -->
+	<ion-card>
+	  <ion-card-content>
+	    <ion-list>
+	    	<ion-item *ngFor="let table of tables let idx = index;">
+	          <button ion-item (click)="openTablePage(idx)">
+	            <h2>Abdul Ghafar</h2>
+	            <p>Tags: TF, Know Connection, High Risk Country</p>
+	            <ion-note item-end >ID: 921841028</ion-note>
+	          </button>
+	        </ion-item>
+	        <ion-item >
+	          <button ion-item >
+	            <h2>Kim Jong Ri</h2>
+	            <p>Tags: PEP, Past History</p>
+	            <ion-note item-end >ID: 91208273</ion-note>
+	          </button>
+	        </ion-item>
+	      </ion-list>
+	  </ion-card-content>
+	</ion-card>
+
+</ion-content>

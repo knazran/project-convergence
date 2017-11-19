@@ -1,0 +1,32 @@
+<!--
+  Generated template for the SummaryModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>High Risk Destination Country Flag</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+  	<ion-segment [(ngModel)]='segment' color='primary' (ionChange)="segmentChanged($event)">
+  		<ion-segment-button value='amount'>
+  			Transaction Amount (RM)
+  		</ion-segment-button>
+  		<ion-segment-button value='frequency'>
+  			Transaction Frequency
+  		</ion-segment-button>
+  	</ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+	<div>
+		<canvas #vizCanvas class="canvas" ></canvas>
+	</div>
+	
+	<!-- <canvas *ngIf="segment=='amount'" #vizCanvas class="canvas" ></canvas> -->
+	<!-- <canvas *ngIf="segment=='frequency'" #vizCanvas class="canvas" ></canvas> -->
+</ion-content>

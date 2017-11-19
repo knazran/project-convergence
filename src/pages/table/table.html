@@ -1,0 +1,124 @@
+<!--
+  Generated template for the TablePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Customer Profile of ID 91208273</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<!-- <div #map id="map"></div>  -->
+	<!-- <div >
+		<canvas class='canvas' #cy></canvas>
+	</div> -->
+	
+	<ion-grid>
+		<ion-row>
+	    	<ion-col col-sm-12 col-md-7 col-lg-5 no-padding>
+	    		<ion-card>
+	      		<ion-card-header>
+      			<strong>Personal Info</strong>
+      			</ion-card-header>
+      			<ion-card-content>
+      			  <h2> <strong>Name:</strong>  {{ name }}</h2>
+      			  <h2> <strong>Date of Birth: </strong> {{ dob }}</h2>
+      			  <h2> <strong>Occupation: </strong>{{ occupation }}</h2>
+      			  <h2> <strong>Nationality:</strong> {{ nationality }}</h2>
+      			  <h2> <strong>Address: </strong> {{ address }}</h2>
+      			  <h2> <strong>Spouse: </strong>{{ spouse }}</h2>
+      			  <h2> <strong>Phone Number: </strong>{{ mobile_num }}</h2>
+      			</ion-card-content>
+      			</ion-card>
+	    	</ion-col>
+	    	<ion-col col-sm-12 col-md-7 col-lg-5 no-padding>
+	    		<ion-card>
+	      		<ion-card-header>
+      			<strong>Summary</strong>
+      			</ion-card-header>
+      			<ion-card-content>
+      				<button ion-button color="danger">High Risk Beneficiaries</button>
+      				<button ion-button color="danger"> >5 Transactions a Week </button>
+      				<button ion-button color="danger" (click)="openSummaryModal()">High Risk Destination Country</button>
+      			</ion-card-content>
+      			</ion-card>
+	    	</ion-col>
+    		
+	    	
+	    	<ion-col col-sm-12 col-md-5 col-lg-2 no-padding>
+	      		<ion-card > 
+	      		<ion-card-content>
+	      		  <ion-avatar >
+	              <img [src]="avatar" />
+	            </ion-avatar>
+	      		</ion-card-content>
+	      		</ion-card>
+	    	</ion-col>
+	    </ion-row>
+	    <ion-row>
+	    	<ion-col col-lg-4 no-padding>
+    	  		<ion-card > 
+    	  		<ion-card-header>
+    	  			<strong>Transaction History</strong>
+    	  		</ion-card-header>
+    	  		<ion-card-content class="medium-component">
+    	  		  <canvas #vizCanvas class="canvas" ></canvas>
+    	  		</ion-card-content>
+    	  		</ion-card>
+    		</ion-col>
+    		<ion-col col-lg-4 no-padding>
+    	  		<ion-card > 
+    	  		<ion-card-header>
+    	  			<strong>Network</strong>
+    	  		</ion-card-header>
+    	  		<ion-card-content class="medium-component" >
+    	  		  <!-- <canvas #cy></canvas> -->
+    	  		  <img [src]="network" />
+    	  		</ion-card-content>
+    	  		</ion-card>
+    		</ion-col>
+    		<ion-col col-lg-4 no-padding>
+    	  		<ion-card > 
+    	  		<ion-card-header>
+    	  			<strong>Facial Recognition</strong>
+    	  		</ion-card-header>
+    	  		<ion-card-content class="medium-component" >
+    	  		  <!-- <canvas #cy></canvas> -->
+    	  		  <img [src]="face" />
+    	  		</ion-card-content>
+    	  		</ion-card>
+    		</ion-col>
+	    </ion-row>
+	    <ion-row>
+	    	<ion-col col-lg-6 no-padding>
+	      		<ion-item>
+	      			<h2>Heat Map</h2>
+	      		</ion-item>
+	      		<!-- <ion-card-content > -->
+	      		  <!-- Money stands for cash -->
+	      		  <!-- <ion-item> -->
+
+	      	<div #map id="map" class="map"></div>
+	      		  <!-- </ion-item> -->
+	      		  
+	      		<!-- </ion-card-content>
+	      		</ion-card> -->
+	    	</ion-col>
+	    		<ion-col col-lg-6 no-padding>
+	    	  		<ion-card > 
+	    	  		<!-- <ion-card-header>
+	    	  			<strong>Social Media</strong>
+	    	  		</ion-card-header> -->
+	    	  		<ion-card-content >
+	    	  		  <a class="twitter-timeline" data-height="300" href="https://twitter.com/khairulnazran?ref_src=twsrc%5Etfw">Tweets by khairulnazran</a> 
+	    	  		</ion-card-content>
+	    	  		</ion-card>
+	    		</ion-col>
+	    </ion-row>
+	</ion-grid>
+</ion-content>

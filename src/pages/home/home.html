@@ -3,16 +3,55 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Project Convergence</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-8 col-lg-6 no-padding>
+        <ion-card (click)="openSectorPage()"> 
+          <ion-card-header>
+            Terrorism Financing
+          </ion-card-header>
+          <ion-card-content>
+            Fund ISIS like a boss
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-12 col-sm-9 col-md-8 col-lg-6 no-padding>
+        <ion-card (click)="openSectorPage()">
+          <ion-card-header>
+            Fraud
+          </ion-card-header>
+          <ion-card-content>
+            Scam people like a boss
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+      <ion-col col-12 col-sm-9 col-md-8 col-lg-6 no-padding>
+        <ion-card (click)="openSectorPage()">
+          <ion-card-header>
+            Hawala
+          </ion-card-header>
+          <ion-card-content>
+            I don't really understand this like a boss
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-12 col-sm-9 col-md-8 col-lg-6 no-padding>
+        <ion-card (click)="openSectorPage()">
+          <ion-card-header>
+            Corruption
+          </ion-card-header>
+          <ion-card-content>
+            Makan dedak like a boss
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
