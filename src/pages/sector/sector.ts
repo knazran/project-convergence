@@ -17,7 +17,7 @@ import { Chart } from 'chart.js';
 })
 export class SectorPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public sector : SectorProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
